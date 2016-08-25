@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html data-ng-app ="moviesApp">
+<head>
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="/stylesheets/build/app.min.css">
+	<script type="text/javascript" src= "/javascripts/jquery.js"></script>
+	<script type="text/javascript" src="/javascripts/build/app.min.js"></script>
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+	
+</head>
+<header>
+	<div class="header_area">
+			<div class="centre header">
+				<div class="logo fix floatleft">
+						<a href="welcome.html">
+							<img src="images/logo.png" alt="logo">
+						</a>	
+				</div>
+				<div class="menu_area floatright">
+					<div class="fix search_site">
+						<form>
+							<p><input type="text" class="search" placeholder="Ask for apps"><input type="submit" class="search_icon" value="search"></p>
+						</form>
+						<div class="top_social fix">
+							<ul>
+								<li><a href=""><i class="fa fa-facebook-square"></i></a></li>
+								<li><a href=""><i class="fa fa-twitter-square"></i></a></li>
+								<li><a href=""><i class="fa fa-google-plus-square"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="top_menu">
+						<ul id="nav">
+							<li><a href="welcome.html">Home</a></li>
+							<li><a href="androidnews.html">Blog</a></li>
+							<li><a href="">Categorias<i class="fa fa-caret-down"></i></a>
+								<ul>
+									<li><a href="">single post</a></li>
+									<li><a href="">single post</a></li>
+									<li><a href="">single post</a></li>
+									<li><a href="">single post</a></li>
+								</ul>
+							</li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+</header>
+<body data-ng-controller="moviesCtrl" >
+<div class= "container" infinite-scroll="getMoreData()">
+	@html.block("body")
+</div>
+
+</body>
+<script type="text/javascript" src="javascripts/angular.min.js"></script>
+<script type='text/javascript' src='/javascripts/ng-infinite-scroll.min.js'></script>
+<script type="text/javascript" src ="/javascripts/appAngular.js"></script>
+</html>
+

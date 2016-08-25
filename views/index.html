@@ -1,0 +1,46 @@
+@html.extend('layout',function(@model){
+	
+	@html.block('body',function(model){
+<div class= "row" style="padding: 30px">
+	<input class="col-lg-12" type="text" data-ng-model = "query" name="" ng-change = "search(query)" placeholder="ingresa el titulo">
+</div>
+	<div class="fix main_content_area"  >
+			<div class="fix centre main_content">
+				<div class="fix home_content floatleft">
+					<div class="fix single_home_content" data-ng-show="movies" >
+						<div class="fix single_home_content_container" >
+							<h2><i class="fa fa-angle-double-down"></i> Resultado de busqueda </h2>
+							<div class="fix single_content floatleft" style="width: 255px; min-height: 215px"  data-ng-repeat= "movie in movies">
+								<img src="" data-ng-src="{{movie.Poster}}" style="max-width: 100px; max-height: 100px">
+								<a href="/movies/{{movie.imdbID}}"><h2>{{movie.Title}}</h2></a>
+								
+								<div class="home_download">
+									<a href="single.html">{{movie.imdbRating}}</a>
+								</div>
+							</div>	
+						</div>
+					</div>
+					
+					
+					<div class="fix single_home_blog_content">
+						<div class="fix single_blog_content_container " >
+							<h2><i class="fa fa-hand-o-down" ></i> Peliculas  </h2>
+
+							<div class="fix single_blog_content floatleft"  data-ng-repeat= "randomMovie in randomMovies">
+								<div class="single_blog_content_img">
+									<a href=""><img src="" data-ng-src="{{randomMovie.Poster}}" style="max-width: 200px; max-height: 200px"></a>
+								</div>
+								<h2><a href="/movies/{{randomMovie.imdbID}}">{{randomMovie.Title}}</a></h2>
+								<p> <span class="floatleft" ><i class="fa fa-clock-o"></i> Año: {{randomMovie.Year}}</span> <span class="floatright"><i class="fa fa-eye"></i> {{randomMovie.Type}}</span></p>
+							</div>
+							
+						</div>
+					</div>
+				</div> <!-- End home content-->
+			
+			</div>
+		</div>
+
+    })
+
+})

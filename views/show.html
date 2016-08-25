@@ -1,0 +1,156 @@
+
+
+
+@html.extend('layout',function(@model){
+	
+	@html.block('body',function(model){
+<div class="fix main_content_area">
+			<div class="fix centre main_content">
+				<div class="fix home_content floatleft">
+				
+					
+					<!--Single page title area-->
+					
+					<div class="fix single_home_content">
+						<div class="fix single_page_feature_img floatleft">
+							<img src="@model.movie.Poster">
+						</div>
+						<div class="fix single_page_title_info floatright">
+							<div class="fix single_page_title">
+								<h1>@model.movie.Title</h1>
+								<div class="single_stars">
+								@for(var i =0; i < parseInt(@model.movie.imdbRating); i++)
+								{
+									<a href=""></a>
+								}
+
+									
+								</div>
+							</div>
+							<div class="fix single_post_meta">
+								<p>
+									<i class="fa fa-user"></i> @model.movie.Production  
+									<i class="fa fa-clock-o"></i> Tiempo: @model.movie.Runtime &nbsp;&nbsp;&nbsp; 
+									<i class="fa fa-file"></i> @model.movie.Year &nbsp;&nbsp;&nbsp; 
+								</p>
+							</div>
+						
+							
+						</div>
+					</div>
+					
+	
+								
+					<div class="fix single_home_content">
+						<div class="fix single_home_content_container">
+							<h2><i class="fa fa-angle-double-down"></i> Informacion </h2>
+
+							<div id="tab-1" class="r-tabs-panel r-tabs-state-active" style="display: block;">
+																	
+										<p><stronng>Sinopsis:</stronng> @model.movie.Plot</p>
+										<table>
+										<tbody>
+											<tr><td>Title</td> <td>:</td> <td>@model.movie.Title</td></tr>
+											<tr><td>Director</td> <td>:</td> <td>@model.movie.Director</td></tr>
+											<tr><td>Escritor</td> <td>:</td> <td>@model.movie.Writer</td></tr>
+											<tr><td>Actores</td> <td>:</td> <td>@model.movie.Actors</td></tr>
+											<tr><td>Lenguaje</td> <td>:</td> <td>@model.movie.Language</td></tr>
+											<tr><td>Pais</td> <td>:</td> <td>@model.movie.Country</td></tr>
+											<tr><td>Genero</td> <td>:</td> <td>@model.movie.Genre</td></tr>
+										
+										</tbody>
+									</table>
+
+								</div>
+						</div>
+					</div>
+					<!--Single page related area-->
+					<div class="fix single_home_content">
+						<div class="fix single_home_content_container">
+							<h2><i class="fa fa-angle-double-down"></i> Related apps </h2>
+							<div class="fix single_content floatleft">
+								<img src="images/ex/apps.jpg">
+								<h2>This is apps title for social apk</h2>
+
+								<div class="home_download">
+									<a href="">Download</a>
+								</div>
+								
+								
+							</div>
+							
+							<div class="fix single_content floatleft">
+								<img src="images/ex/apps.jpg">
+								<h2>this is apps title</h2>
+	
+								<div class="home_download">
+									<a href="">Download</a>
+								</div>
+								
+								
+							</div>
+							
+							<div class="fix single_content floatleft">
+								<img src="images/ex/apps.jpg">
+								<h2>this is apps title</h2>
+		
+								<div class="home_download">
+									<a href="">Download</a>
+								</div>
+								
+								
+							</div>
+							
+							<div class="fix single_content floatleft">
+								<img src="images/ex/apps.jpg">
+								<h2>this is apps title</h2>
+
+								<div class="home_download">
+									<a href="">Download</a>
+								</div>
+								
+								
+							</div>
+							
+							<div class="fix single_content floatleft">
+								<img src="images/ex/apps.jpg">
+								<h2>this is apps title</h2>
+
+								<div class="home_download">
+									<a href="">Download</a>
+								</div>
+								
+								
+							</div>
+							
+							<div class="fix single_content floatleft">
+								<img src="images/ex/apps.jpg">
+								<h2>this is apps title</h2>
+
+								<div class="home_download">
+									<a href="">Download</a>
+								</div>
+								
+								
+							</div>
+							
+
+
+						</div>
+					</div>
+					
+					
+					
+				</div> <!-- End home content-->
+				<div class="fix home_content_sidebar floatright">
+			
+					
+					
+					
+
+				</div> <!-- End home sidebar-->
+			</div>
+		</div>
+		   })
+
+})
