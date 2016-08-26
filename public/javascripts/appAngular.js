@@ -3,7 +3,7 @@
 		var items = [];	
 		var page = 1;
 
-		$scope.randomMovies = function(callback){
+		$scope.randomMovies = function(){
 			$http.get('/api/movies/random-movies')
 			.success(function(data,status,header,config){
 			if(data instanceof Array)
@@ -21,15 +21,15 @@
 				$scope.randomMovies = [data].splice(1,3)
 
 			}
-			if(items.length < 3) callback();;
-
+			
+			console.log(data);
 					
 		}).error(function(data,status,header,config){
 			console.log("Error");
 			});
 		}
-		var callback = $scope.randomMovies();
-		$scope.randomMovies(callback);
+		
+		$scope.randomMovies();
 
 		$scope.search = function(query)
 		{
@@ -87,5 +87,6 @@
 		}
 	}
 });
+	
 
 	

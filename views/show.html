@@ -13,6 +13,10 @@
 					
 					<div class="fix single_home_content">
 						<div class="fix single_page_feature_img floatleft">
+						@if(@model.movie.Poster == "N/A")
+							{
+								<img src="/images/not-found.png">
+							}
 							<img src="@model.movie.Poster">
 						</div>
 						<div class="fix single_page_title_info floatright">
@@ -48,15 +52,35 @@
 							<div id="tab-1" class="r-tabs-panel r-tabs-state-active" style="display: block;">
 																	
 										<p><stronng>Sinopsis:</stronng> @model.movie.Plot</p>
-										<table>
+										<table class="table">
 										<tbody>
-											<tr><td>Title</td> <td>:</td> <td>@model.movie.Title</td></tr>
-											<tr><td>Director</td> <td>:</td> <td>@model.movie.Director</td></tr>
-											<tr><td>Escritor</td> <td>:</td> <td>@model.movie.Writer</td></tr>
-											<tr><td>Actores</td> <td>:</td> <td>@model.movie.Actors</td></tr>
-											<tr><td>Lenguaje</td> <td>:</td> <td>@model.movie.Language</td></tr>
-											<tr><td>Pais</td> <td>:</td> <td>@model.movie.Country</td></tr>
-											<tr><td>Genero</td> <td>:</td> <td>@model.movie.Genre</td></tr>
+											<tr>
+												<td>Title:</td> 
+												<td>@model.movie.Title</td>
+											</tr>
+											<tr>
+												<td>Director:</td> 
+												<td>@model.movie.Director</td>
+											</tr>
+											<tr>
+												<td>Escritor:</td> 
+												<td>@model.movie.Writer</td>
+											</tr>
+											<tr>
+												<td>Actores:</td> 
+												<td>@model.movie.Actors</td>
+											</tr>
+											<tr>
+												<td>Lenguaje:</td> 
+												<td>@model.movie.Language</td>
+											</tr>
+											<tr>
+												<td>Pais:</td> 
+												<td>@model.movie.Country</td>
+											</tr>
+												<tr><td>Genero:</td> 
+												<td>@model.movie.Genre</td>
+											</tr>
 										
 										</tbody>
 									</table>
@@ -68,74 +92,10 @@
 					<div class="fix single_home_content">
 						<div class="fix single_home_content_container">
 							<h2><i class="fa fa-angle-double-down"></i> Related apps </h2>
-							<div class="fix single_content floatleft">
-								<img src="images/ex/apps.jpg">
-								<h2>This is apps title for social apk</h2>
-
-								<div class="home_download">
-									<a href="">Download</a>
-								</div>
-								
-								
+							<div class="fix single_content floatleft" data-ng-repeat = "movie in randomMovies">
+								<img src="{{movie.Poster}}">
+								<a href="/movies/{{movie.imdbID}}"><h2>{{movie.Title}}</h2></a>
 							</div>
-							
-							<div class="fix single_content floatleft">
-								<img src="images/ex/apps.jpg">
-								<h2>this is apps title</h2>
-	
-								<div class="home_download">
-									<a href="">Download</a>
-								</div>
-								
-								
-							</div>
-							
-							<div class="fix single_content floatleft">
-								<img src="images/ex/apps.jpg">
-								<h2>this is apps title</h2>
-		
-								<div class="home_download">
-									<a href="">Download</a>
-								</div>
-								
-								
-							</div>
-							
-							<div class="fix single_content floatleft">
-								<img src="images/ex/apps.jpg">
-								<h2>this is apps title</h2>
-
-								<div class="home_download">
-									<a href="">Download</a>
-								</div>
-								
-								
-							</div>
-							
-							<div class="fix single_content floatleft">
-								<img src="images/ex/apps.jpg">
-								<h2>this is apps title</h2>
-
-								<div class="home_download">
-									<a href="">Download</a>
-								</div>
-								
-								
-							</div>
-							
-							<div class="fix single_content floatleft">
-								<img src="images/ex/apps.jpg">
-								<h2>this is apps title</h2>
-
-								<div class="home_download">
-									<a href="">Download</a>
-								</div>
-								
-								
-							</div>
-							
-
-
 						</div>
 					</div>
 					

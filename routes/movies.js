@@ -16,7 +16,7 @@ router.get('/random-movies', function(req, res, next) {
 });
 router.get('/:id', function(req, res, next) {
 	var id = req.params.id;
-	movieHelper.getDetail(id,"short").then(function(resp){
+	movieHelper.getDetail(id,movieHelper.PLOTSIZE.FULL).then(function(resp){
 		res.render('show', {movie: resp});
 		console.log(resp);
 		},function(error){
