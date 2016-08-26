@@ -10,15 +10,19 @@
 					<div class="fix single_home_content" data-ng-show="movies" >
 						<div class="fix single_home_content_container" >
 							<h2><i class="fa fa-angle-double-down"></i> Resultado de busqueda </h2>
-							<div class="fix single_content floatleft" style="width: 255px; min-height: 215px"  data-ng-repeat= "movie in movies">
 							
+							<div class="fix single_content floatleft" style="width: 255px; min-height: 215px"  data-ng-repeat= "movie in movies">
+							<a href="/movies/{{movie.imdbID}}">
 								<img src="" data-ng-src="{{movie.Poster}}" style="max-width: 100px; max-height: 100px">
-								<a href="/movies/{{movie.imdbID}}"><h2>{{movie.Title}}</h2></a>
+								<h2>{{movie.Title}}</h2>
 								
 								<div class="home_download">
-									<a href="single.html">{{movie.imdbRating}}</a>
+									<p>Año: {{movie.Year}}</p>
+									<p>Tipo: {{movie.Type}}</p>
 								</div>
+								</a>
 							</div>	
+							
 						</div>
 					</div>
 					
